@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+
+
+  <style>
+
+     header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .two-columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .column div {
+      width: 48%;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .section {
+      margin-top: 30px;
+       color: #2c3e50;
+      
+    }
+
+    .project-date {
+      float: right;
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1a242f;
+    }
+
+    .comment {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+    }
+
+    .download {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .download a {
+      text-decoration: none;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .two-columns div {
+        width: 100%;
+      }
+    }
+  </style>
+</head> 
+<body>
+
+ 
+  <div class="container">
+    <h1>Jezter M. Mangacu</h1>
+    <h2>Aspiring Web Developer</h2>
+   
+
+    <!-- About Me -->
+    <div class="section">
+      <h3>About Me</h3>
+      <p> I'm a passionate student who's interested in games and making friends.</p>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h3>Education</h3>
+      <p> <b>Primary</b> - Capas West Elementary School</p>
+      <P>O'Donnell Capas Tarlac</P>
+       <br>
+      <p> <b>Secondary</b> - O'Donnell High School</p>
+        <P>O'Donnell Capas Tarlac</P>
+         <br>
+      <p> <b>Tertiary</b> - Dominican College of Tarlac</p>
+      <P>Sto.Rosario, Capas Tarlac</P>
+
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <h3>Skills</h3>
+      <div class="column">
+        <div>
+          <ul>
+            <li>HMTL</li>
+            <li>CSS</li>
+            <li>Basic Python</li>
+            <li>Multi Tasking</li>
+            <li>Multi Tasking</li>
+
+          </ul>
+        </div>
+    </div>
+
+    <!-- Projects or Experience -->
+    <div class="section">
+      <h3>Projects / Experience</h3>
+      <p><b>Elective 2</b><span class="project-date">2024</span></p>
+      <ul>
+        <li>Planner</li>
+      </ul>
+
+      <p><b>S.A.D Project Manager </b><span class="project-date">2025</span></p>
+      <ul>
+        <li>Visito Mangement System</li>
+      </ul>
+
+      
+    </div>
+
+    <!-- Contact Me -->
+    <div class="section">
+      <h3>Contact Me</h3>
+      <form onsubmit="handleContact(event)">
+        <input type="email" id="email" placeholder="Your email" required />
+        <textarea id="message" rows="4" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="contact-msg" style="color: green;"></p>
+      </form>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="section">
+      <h3>Leave a Comment</h3>
+      <form onsubmit="handleComment(event)">
+        <input type="text" id="comment-name" placeholder="Your name" required />
+        <textarea id="comment-text" rows="3" placeholder="Your comment" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="comments"></div>
+    </div>
+
+    <!-- Download Button -->
+    <div class="download">
+      <a href="resume.pdf" download>📄 Downloa
